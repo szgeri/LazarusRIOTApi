@@ -1,0 +1,149 @@
+object MForm: TMForm
+  Left = 377
+  Height = 545
+  Top = 176
+  Width = 1164
+  Caption = 'RIOT API test'
+  ClientHeight = 545
+  ClientWidth = 1164
+  DesignTimePPI = 144
+  OnCreate = FormCreate
+  LCLVersion = '2.0.8.0'
+  object Label1: TLabel
+    Left = 56
+    Height = 25
+    Top = 52
+    Width = 106
+    Alignment = taRightJustify
+    Caption = 'RIOT API key:'
+    ParentColor = False
+  end
+  object EditAPIKey: TEdit
+    Left = 184
+    Height = 33
+    Top = 48
+    Width = 432
+    TabOrder = 0
+    Text = 'RGAPI-48f80995-f03c-4427-809c-796a035f7d7f'
+  end
+  object Button1: TButton
+    Left = 184
+    Height = 38
+    Top = 152
+    Width = 170
+    Caption = 'Download info'
+    OnClick = Button1Click
+    TabOrder = 1
+  end
+  object MemoLog: TMemo
+    Left = 632
+    Height = 351
+    Top = 96
+    Width = 497
+    TabOrder = 2
+  end
+  object Label2: TLabel
+    Left = 632
+    Height = 25
+    Top = 52
+    Width = 34
+    Caption = 'Log:'
+    ParentColor = False
+  end
+  object Label3: TLabel
+    Left = 21
+    Height = 25
+    Top = 100
+    Width = 141
+    Alignment = taRightJustify
+    Caption = 'Summoner name:'
+    ParentColor = False
+  end
+  object EditSummoner: TEdit
+    Left = 184
+    Height = 33
+    Top = 96
+    Width = 432
+    TabOrder = 3
+    Text = 'zhuninghaoyun'
+  end
+  object Label4: TLabel
+    Left = 31
+    Height = 25
+    Top = 264
+    Width = 132
+    Alignment = taRightJustify
+    Caption = 'Summoner level:'
+    ParentColor = False
+  end
+  object LabelSummonerLevel: TLabel
+    Left = 184
+    Height = 25
+    Top = 264
+    Width = 432
+    AutoSize = False
+    Font.Color = clNavy
+    Font.Style = [fsBold]
+    ParentColor = False
+    ParentFont = False
+  end
+  object Label5: TLabel
+    Left = 52
+    Height = 25
+    Top = 216
+    Width = 111
+    Alignment = taRightJustify
+    Caption = 'Summoner ID'
+    ParentColor = False
+  end
+  object LabelSummonerID: TLabel
+    Left = 184
+    Height = 25
+    Top = 216
+    Width = 432
+    AutoSize = False
+    Font.Color = clNavy
+    Font.Style = [fsBold]
+    ParentColor = False
+    ParentFont = False
+  end
+  object ToggleBox1: TToggleBox
+    Left = 456
+    Height = 38
+    Top = 480
+    Width = 161
+    Caption = 'Exit program'
+    OnChange = ToggleBox1Change
+    TabOrder = 4
+  end
+  object HTTP1: TIdHTTP
+    IOHandler = IdSSLIOHandlerSocketOpenSSL1
+    ProxyParams.BasicAuthentication = False
+    ProxyParams.ProxyPort = 0
+    Request.ContentLength = -1
+    Request.ContentRangeEnd = -1
+    Request.ContentRangeStart = -1
+    Request.ContentRangeInstanceLength = -1
+    Request.Date = 0
+    Request.Expires = 0
+    Request.LastModified = 0
+    Request.Accept = 'text/html,application/xhtml+xml,application/xml;q=0.9,*/*;q=0.8'
+    Request.BasicAuthentication = False
+    Request.UserAgent = 'Mozilla/3.0 (compatible; Indy Library)'
+    Request.Ranges.Units = 'bytes'
+    Request.Ranges = <>
+    HTTPOptions = [hoForceEncodeParams]
+    left = 552
+    top = 152
+  end
+  object IdSSLIOHandlerSocketOpenSSL1: TIdSSLIOHandlerSocketOpenSSL
+    MaxLineAction = maException
+    Port = 0
+    DefaultPort = 0
+    SSLOptions.Mode = sslmUnassigned
+    SSLOptions.VerifyMode = []
+    SSLOptions.VerifyDepth = 0
+    left = 552
+    top = 248
+  end
+end
